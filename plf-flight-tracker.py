@@ -22,23 +22,28 @@ def insertData(data):
 
 def displayData(data):
     list.delete(0,tk.END)
-    for flight in data:
-        try:
-            date = flight['status']['generic']['eventTime']['utc_millis']
-            dateFormated = datetime.datetime.fromtimestamp(date / 1000)
-        except KeyError:
-        # Key is not present
-            dateFormated = '                '
-            # pass
-        statusText = flight['status']['text']
-        status = flight['status']['live']
-        origin = flight['airport']['origin']['name']
-        dest = flight['airport']['destination']['name']
-        if status!=0:
-            list.itemconfig(tk.END,{'bg':'green','fg':'white'})
-        else:
-            status = ''
-        line = (f"{ dateFormated }  { statusText }  {status} FROM: {origin} TO: {dest}")
+    print(len(data))
+    if len(data):
+        for flight in data:
+            try:
+                date = flight['status']['generic']['eventTime']['utc_millis']
+                dateFormated = datetime.datetime.fromtimestamp(date / 1000)
+            except KeyError:
+            # Key is not present
+                dateFormated = ''
+                # pass
+            statusText = flight['status']['text']
+            status = flight['status']['live']
+            origin = flight['airport']['origin']['name']
+            dest = flight['airport']['destination']['name']
+            if status!=0:
+                list.itemconfig(tk.END,{'bg':'green','fg':'white'})
+            else:
+                status = ''
+            line = (f"{ dateFormated }  { statusText }  {status} FROM: {origin} TO: {dest}")
+            list.insert(tk.END,line)
+    else:
+        line = ("No data")
         list.insert(tk.END,line)
         
 
