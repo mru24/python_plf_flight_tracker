@@ -1,138 +1,42 @@
+NONE: {
 'identification': {
-    'number': {
-        'default': 'PLF106', 
-        'alternative': 'None'
-    }, 
-    'callsign': 'PLF106', 
+    'number': 
+        {'default': 'FR9939', 'alternative': 'None'}, 
+    'callsign': 'RYR9939', 
     'codeshare': 'None'
-}, 
+    }, 
 'status': {
-    'live': False, 
-    'text': 'Landed 13:28', 
-    'estimated': 'None', 
-    'ambiguous': False, 
-    'generic': {
-        'status': {
-            'text': 'landed', 
-            'type': 'arrival', 
-            'color': 'green', 
-            'diverted': 'None'
-        }, 
-        'eventTime': {
-            'utc_millis': 1707222501000, 
-            'utc_date': '20240206', 
-            'utc_time': '1228', 
-            'utc': 1707222501, 
-            'local_millis': 1707226101000, 
-            'local_date': '20240206', 
-            'local_time': '1328', 
-            'local': 1707226101
-        }
+    'live': False, 'text': 'Landed 09:06', 'estimated': 'None', 'ambiguous': False, 'generic': {
+        'status': {'text': 'landed', 'type': 'arrival', 'color': 'green', 'diverted': 'None'}, 
+        'eventTime': {'utc_millis': 1712300768000, 'utc_date': '20240405', 'utc_time': '0806', 'utc': 1712300768, 'local_millis': 1712307968000, 'local_date': '20240405', 'local_time': '1006', 'local': 1712307968}
     }
 }, 
-'aircraft': 'None', 
-'owner': 'None', 
-'airline': {
-    'name': 'Poland - Air Force', 
-    'code': {
-        'iata': 'None', 
-        'icao': 'PLF'
-    }
-}, 
+'aircraft': {
+    'model': {
+        'code': 'B738', 
+        'text': 'Boeing 737-8AS'}, 
+    'registration': 'EI-EFK', 
+    'country': {'name': 'Ireland', 'alpha2': 'IE', 'alpha3': 'IRL'}, 
+    'restricted': False, 'serialNo': 'None', 
+    'age': {'availability': True}, 
+    'availability': {'serialNo': True, 'age': True}}, 
+
+'owner': {'name': 'Ryanair', 'code': {'iata': 'FR', 'icao': 'RYR'}}, 
+
+'airline': {'name': 'Ryanair', 'code': {'iata': 'FR', 'icao': 'RYR'}, 'short': 'Ryanair'}, 
+
 'airport': {
     'origin': {
-        'name': 'Warsaw Chopin Airport', 
-        'code': {
-            'iata': 'WAW', 
-            'icao': 'EPWA'
-        }, 
+        'name': 'Nottingham East Midlands Airport', 
+        'code': {'iata': 'EMA', 'icao': 'EGNX'}, 
         'position': {
-            'latitude': 52.165749, 
-            'longitude': 20.967119, 
-            'country': {
-                'name': 'Poland', 
-                'code': 'PL'
-            }, 
-            'region': {
-                'city': 'Warsaw'
-            }
+            'latitude': 52.831108, 'longitude': -1.32805, 
+            'country': {'name': 'United Kingdom', 'code': 'GB'}, 
+            'region': {'city': 'Nottingham'}
         }, 
-        'timezone': {
-            'name': 'Europe/Warsaw', 
-            'offset': 3600, 
-            'abbr': 'CET', 
-            'abbrName': 'Central European Time', 
-            'isDst': False
-        }, 
-        'visible': True
-    }, 
+        'timezone': {'name': 'Europe/London', 'offset': 3600, 'abbr': 'BST', 'abbrName': 'British Summer Time', 'isDst': True}, 
+        'visible': True}, 
     'destination': {
-        'name': 'Warsaw Chopin Airport', 
-        'code': {
-            'iata': 'WAW', 
-            'icao': 'EPWA'
-        }, 
-        'position': {
-            'latitude': 52.165749, 
-            'longitude': 20.967119, 
-            'country': {
-                'name': 'Poland', 
-                'code': 'PL'
-            }, 
-            'region': {
-                'city': 'Warsaw'
-            }
-        }, 
-        'timezone': {
-            'name': 'Europe/Warsaw', 
-            'offset': 3600, 
-            'abbr': 'CET', 
-            'abbrName': 'Central European Time', 
-            'isDst': False
-        }, 
-        'visible': True
-    }, 
-    'real': 'None'
-}, 
-'time': {
-    'scheduled': {
-        'departure_millis': 1707213600000, 
-        'departure_date': '20240206', 
-        'departure_time': '1000', 
-        'departure': 1707213600, 
-        'arrival_millis': 1707224280000, 
-        'arrival_date': '20240206', 
-        'arrival_time': '1258', 
-        'arrival': 1707224280
-    }, 
-    'real': {
-        'departure_millis': 1707214103000, 
-        'departure_date': '20240206', 
-        'departure_time': '1008', 
-        'departure': 1707214103, 
-        'arrival_millis': 1707222501000, 
-        'arrival_date': '20240206', 
-        'arrival_time': '1228', 
-        'arrival': 1707222501
-    }, 
-    'estimated': {
-        'departure': 'None', 
-        'arrival': 'None'
-    }, 
-    'other': {
-        'eta_millis': 1707222501000, 
-        'eta_date': '20240206', 
-        'eta_time': '1228', 
-        'eta': 1707222501, 
-        'updated_millis': 1707222502000, 
-        'updated_date': '20240206', 
-        'updated_time': '1228', 
-        'updated': 1707222502, 
-        'duration': 8400
-    }
-}
+        'name': 'Lodz Wladyslaw Reymont Airport', 'code': {'iata': 'LCJ', 'icao': 'EPLL'}, 'position': {'latitude': 51.721882, 'longitude': 19.39813, 'country': {'name': 'Poland', 'code': 'PL'}, 'region': {'city': 'Lodz'}}, 'timezone': {'name': 'Europe/Warsaw', 'offset': 7200, 'abbr': 'CEST', 'abbrName': 'Central European Summer Time', 'isDst': True}, 'visible': True}, 'real': 'None'}, 
 
-
-
-'identification': {'number': {'default': 'PLF106', 'alternative': 'None'}, 'callsign': 'PLF106', 'codeshare': 'None'}, 'status': {'live': False, 'text': 'Canceled', 'estimated': 'None', 'ambiguous': False, 'generic': {'status': {'text': 'canceled', 'type': 'departure', 'color': 'red', 'diverted': 'None'}, 'eventTime': {'utc': 'None', 'local': 'None'}}}, 'aircraft': {'model': {'code': 'GLF5', 'text': 'None'}, 'registration': 'None', 'serialNo': 'None', 'age': 'None', 'restricted': 'None', 'availability': {'serialNo': 'None', 'age': 'None'}}, 'owner': 'None', 'airline': {'name': 'Poland - Air Force', 'code': {'iata': 'None', 'icao': 'PLF'}}, 'airport': 
-{'origin': {'name': 'Wroclaw Copernicus Airport', 'code': {'iata': 'WRO', 'icao': 'EPWR'}, 'position': {'latitude': 51.10268, 'longitude': 16.88583, 'country': {'name': 'Poland', 'code': 'PL'}, 'region': {'city': 'Wroclaw'}}, 'timezone': {'name': 'Europe/Warsaw', 'offset': 3600, 'abbr': 'CET', 'abbrName': 'Central European Time', 'isDst': False}, 'visible': True}, 'destination': {'name': 'Rzeszow Jasionka Airport', 'code': {'iata': 'RZE', 'icao': 'EPRZ'}, 'position': {'latitude': 50.109951, 'longitude': 22.018999, 'country': {'name': 'Poland', 'code': 'PL'}, 'region': {'city': 'Rzeszow'}}, 'timezone': {'name': 'Europe/Warsaw', 'offset': 3600, 'abbr': 'CET', 'abbrName': 'Central European Time', 'isDst': False}, 'visible': True}, 'real': 'None'}, 'time': {'scheduled': {'departure_millis': 1707304200000, 'departure_date': '20240207', 'departure_time': '1110', 'departure': 1707304200, 'arrival_millis': 1707307920000, 'arrival_date': '20240207', 'arrival_time': '1212', 'arrival': 1707307920}, 'real': {'departure': 'None', 'arrival': 'None'}, 'estimated': {'departure': 'None', 'arrival': 'None'}, 'other': {'eta': 'None', 'updated_millis': 1707288233000, 'updated_date': '20240207', 'updated_time': '0643', 'updated': 1707288233, 'duration': 'None'}}
+'time': {'scheduled': {'departure_millis': 1712293200000, 'departure_date': '20240405', 'departure_time': '0600', 'departure': 1712293200, 'arrival_millis': 1712301900000, 'arrival_date': '20240405', 'arrival_time': '0825', 'arrival': 1712301900}, 'real': {'departure_millis': 1712294050000, 'departure_date': '20240405', 'departure_time': '0614', 'departure': 1712294050, 'arrival_millis': 1712300768000, 'arrival_date': '20240405', 'arrival_time': '0806', 'arrival': 1712300768}, 'estimated': {'departure': 'None', 'arrival': 'None'}, 'other': {'eta_millis': 1712300768000, 'eta_date': '20240405', 'eta_time': '0806', 'eta': 1712300768, 'updated_millis': 1712301037000, 'updated_date': '20240405', 'updated_time': '0810', 'updated': 1712301037, 'duration': 6720}}}

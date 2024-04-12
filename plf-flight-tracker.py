@@ -6,7 +6,7 @@ import tkinter as tk
 import tkinter.font as TkFont
 
 root = tk.Tk()
-root.geometry('800x400')
+root.geometry('900x500')
 root.title('Flight tracker')
 lf = TkFont.Font(family='Helvetica', size=12, weight='normal')
 
@@ -22,30 +22,41 @@ def insertData(data):
 
 def displayData(data):
     list.delete(0,tk.END)
-    print(len(data))
+    date = ''
+    dateFormated = ''
+    statusText = ''
+    status = ''
+    origin = ''
+    dest = ''
+    aircraft = ''
+    reg = ''
     if len(data):
         for flight in data:
-            try:
+            if flight['status']['generic']['eventTime']['utc'] != 'None':
                 date = flight['status']['generic']['eventTime']['utc_millis']
                 dateFormated = datetime.datetime.fromtimestamp(date / 1000)
-            except KeyError:
-            # Key is not present
-                dateFormated = ''
-                # pass
             statusText = flight['status']['text']
             status = flight['status']['live']
             origin = flight['airport']['origin']['name']
             dest = flight['airport']['destination']['name']
-            if status!=0:
+            if flight['aircraft'] != 'None':
+                if flight['aircraft']['model'] != 'None':
+                    if flight['aircraft']['model']['text']:
+                        aircraft = flight['aircraft']['model']['text']
+                        if flight['aircraft']['registration']:
+                            reg = flight['aircraft']['registration']
+
+            if status=='True':
+                print("LIVE",flight['aircraft'])
                 list.itemconfig(tk.END,{'bg':'green','fg':'white'})
+                line = (f"{ dateFormated }  { statusText }  {status} FROM: {origin} TO: {dest} { aircraft } { reg }")
             else:
-                status = ''
-            line = (f"{ dateFormated }  { statusText }  {status} FROM: {origin} TO: {dest}")
+                print("NONE:",flight['aircraft'])
+                line = (f"{ statusText } { dateFormated } FROM: {origin} TO: {dest} { aircraft } { reg }")            
             list.insert(tk.END,line)
     else:
         line = ("No data")
-        list.insert(tk.END,line)
-        
+        list.insert(tk.END,line)        
 
 topFrame = tk.Frame(root,pady=5)
 midFrame = tk.Frame(root,pady=5)
